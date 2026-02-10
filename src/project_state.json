@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build an app that lets the user upload an Excel/CSV sheet, enter any value to search across the entire sheet, and display the rest of the matching row’s data in a column-wise key/value layout using the headers as labels.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-frontend-workflow-that-lets-the-user-upload-a-spreadsheet-file-support-xlsx-and-csv-parses-it-in-the-browser-and-detects-the-header-row-to-produce-a-list-of-columns",
+      "title": "Implement a frontend workflow that lets the user upload a spreadsheet file (support .xlsx and .csv), parses it in the browser, and detects the header row to produce a list of columns.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-search-ui-where-the-user-selects-a-column-to-search-enters-a-value-and-triggers-a-search-that-filters-rows-where-the-selected-column-matches-the-entered-value-with-a-clearly-labeled-option-to-toggle-exact-match-vs-case-insensitive-contains",
+      "title": "Add a search UI where the user selects a column to search, enters a value, and triggers a search that filters rows where the selected column matches the entered value (with a clearly labeled option to toggle Exact match vs Case-insensitive contains).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-retrieved-data-column-wise-for-each-matching-row-show-a-readable-key-value-layout-where-each-column-header-is-a-label-and-the-corresponding-cell-value-is-displayed-next-to-it-support-multiple-matches-and-clearly-show-match-count",
+      "title": "Display the retrieved data “column-wise”: for each matching row, show a readable key/value layout where each column header is a label and the corresponding cell value is displayed next to it; support multiple matches and clearly show match count.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-data-handling-rules-for-spreadsheets-trim-whitespace-around-searched-values-handle-missing-headers-by-falling-back-to-generated-column-names-e-g-column-a-column-b-and-ignore-fully-empty-rows",
+      "title": "Add basic data handling rules for spreadsheets: trim whitespace around searched values, handle missing headers by falling back to generated column names (e.g., Column A, Column B), and ignore fully empty rows.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-coherent-distinctive-visual-theme-for-the-app-colors-typography-spacing-component-styling-and-apply-it-consistently-across-the-upload-area-search-controls-and-results-layout-avoid-a-blue-purple-primary-palette",
+      "title": "Create a coherent, distinctive visual theme for the app (colors, typography, spacing, component styling) and apply it consistently across the upload area, search controls, and results layout (avoid a blue/purple primary palette).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-search-workflow-so-the-user-can-enter-any-value-and-search-across-the-entire-uploaded-sheet-all-columns-returning-all-rows-where-any-cell-matches-the-entered-value-and-display-the-rest-of-the-data-from-those-matching-rows-using-the-column-headers-as-labels",
+      "title": "Update the search workflow so the user can enter any value and search across the entire uploaded sheet (all columns), returning all rows where any cell matches the entered value, and display the rest of the data from those matching rows using the column headers as labels.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create an app to search an Excel sheet by an entered value and display the retrieved data column-wise",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Allow searching by an entered value across the entire sheet (all columns) and return/display the rest of the matching row with headers as labels",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Excel/CSV search app: retrieve matching rows from an uploaded sheet and display results column-wise",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

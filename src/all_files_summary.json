@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no implemented logic.",
+  "feature_evidence.json": "Feature evidence report describing the all-columns search feature and related files/components.",
+  "frontend-file-summaries.txt": "Text file containing pre-written summaries for various frontend components and utilities.",
+  "frontend/index.css": "Tailwind base and theme variables defining warm coral color palette for light and dark modes.",
+  "frontend/index.html": "HTML entry point loading the React application via main.tsx.",
+  "frontend/src/App.tsx": "Main React app handling file upload, spreadsheet parsing, search execution, and result display.",
+  "frontend/src/components/ResultsList.tsx": "Displays matching spreadsheet rows with column/value pairs and scrollable layout.",
+  "frontend/src/components/SearchControls.tsx": "Search form allowing column selection (including all-columns), value input, and match mode toggle.",
+  "frontend/src/components/SpreadsheetUploader.tsx": "Spreadsheet upload component supporting CSV/XLSX files with loading and error states.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing a backend actor instance with authentication-aware caching.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React hook and provider managing Internet Identity login state, loading stored identities, and exposing login/clear utilities.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder module indicating no backend queries are used.",
+  "frontend/src/index.css": "Tailwind base styles and custom OKLCH color theme variables for light and dark modes.",
+  "frontend/src/lib/spreadsheet/parseSpreadsheet.ts": "Parses CSV and XLSX files in-browser, generating columns, normalizing cell values, and returning structured row data.",
+  "frontend/src/lib/spreadsheet/search.ts": "Implements exact and contains search across one or all spreadsheet columns.",
+  "frontend/src/lib/spreadsheet/types.ts": "Type definitions for spreadsheet columns, rows, parsed results, errors, and search modes.",
+  "frontend/src/main.tsx": "App entry point that mounts React with QueryClient and InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors, fonts, animations, and enabling plugins.",
+  "project_state.json": "Metadata describing project requirements, implemented features, and current state."
+}

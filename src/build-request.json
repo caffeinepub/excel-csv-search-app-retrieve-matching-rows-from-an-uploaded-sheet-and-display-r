@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Enable search by value across the entire spreadsheet (all columns) and return full matching rows",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Update the search workflow so the user can enter any value and search across the entire uploaded sheet (all columns), returning all rows where any cell matches the entered value, and display the rest of the data from those matching rows using the column headers as labels.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "ANY DATA ENTERED FIND FROM ENTIRE SHEET AND REPLAY WITH REST OF DATA IN SAME ROW WITH OP ROW AS LABEL"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The search UI includes an option to search across the entire sheet (all columns) in addition to searching a specific column.",
+        "When “All columns” search is used, a row is considered a match if any cell value in that row matches the entered search value according to the selected match mode (Exact vs Case-insensitive contains), using the same trimming/normalization rules as existing column-based search.",
+        "Search results display the full matching row in the existing column-wise key/value layout, using the spreadsheet headers (or generated column names) as labels.",
+        "The search button can be used without selecting a specific column when “All columns” is selected, and user-facing text is in English.",
+        "Existing column-specific search behavior remains available and unchanged when a specific column is selected."
+      ]
+    }
+  ],
+  "constraints": [
+    "Keep all spreadsheet parsing and searching client-side (no new backend dependency).",
+    "Do not modify files under frontend/src/components/ui or any frontend immutablePaths listed in SYSTEM_CONTEXT."
+  ],
+  "nonGoals": [
+    "Adding server-side storage or indexing of spreadsheet data.",
+    "Adding real-time collaboration, multi-sheet selection, or editing spreadsheet data in the UI."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

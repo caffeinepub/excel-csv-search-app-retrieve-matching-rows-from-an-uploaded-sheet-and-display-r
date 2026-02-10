@@ -1,0 +1,40 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Spreadsheet all-columns search returning full matching rows",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Add an “All columns” search option that matches rows when any cell matches the query (exact or case-insensitive contains) and display full matching rows using headers as labels while keeping existing per-column search unchanged.",
+      "acceptanceCriteria": [
+        "The search UI includes an option to search across the entire sheet (all columns) in addition to searching a specific column.",
+        "When “All columns” search is used, a row is considered a match if any cell value in that row matches the entered search value according to the selected match mode (Exact vs Case-insensitive contains), using the same trimming/normalization rules as existing column-based search.",
+        "Search results display the full matching row in the existing column-wise key/value layout, using the spreadsheet headers (or generated column names) as labels.",
+        "The search button can be used without selecting a specific column when “All columns” is selected, and user-facing text is in English.",
+        "Existing column-specific search behavior remains available and unchanged when a specific column is selected."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/spreadsheet/types.ts",
+          "operation": "modify",
+          "description": "Introduce a shared constant (e.g., a sentinel string) representing the “All columns” selection so UI and search logic can consistently detect all-columns search without changing existing column-name behavior."
+        },
+        {
+          "path": "frontend/src/lib/spreadsheet/search.ts",
+          "operation": "modify",
+          "description": "Extend client-side search to support the “All columns” sentinel by matching a row when any cell matches the query using the same normalization (trim) and the existing match modes (exact vs case-insensitive contains); preserve existing single-column filtering behavior when a specific column name is provided."
+        },
+        {
+          "path": "frontend/src/components/SearchControls.tsx",
+          "operation": "modify",
+          "description": "Update the search workflow UI to include an “All columns” option in the column Select, adjust validation so Search is enabled when “All columns” is selected (even if no specific column is chosen), and ensure all user-facing text remains English. Use the existing shadcn-ui Select/Switch/Button/Input components to implement the option and interactions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the updated SearchControls selection into search execution by passing the selected column (or the “All columns” sentinel) through to the client-side search function, ensuring no new backend dependency is introduced and that existing column-specific searches continue to work as before."
+        }
+      ]
+    }
+  ]
+}

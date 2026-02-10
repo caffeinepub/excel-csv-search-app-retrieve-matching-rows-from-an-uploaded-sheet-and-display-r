@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates spreadsheet upload, parsing, search functionality (including all-columns search), and results display with a warm coral/orange themed layout and footer attribution.",
+  "frontend/src/lib/spreadsheet/types.ts": "TypeScript type definitions for spreadsheet data structures including columns, rows, parse results, search match modes, and the ALL_COLUMNS_SENTINEL constant for all-columns search.",
+  "frontend/src/lib/spreadsheet/parseSpreadsheet.ts": "Client-side parser for CSV and XLSX files that dynamically loads SheetJS library from CDN, with header detection, empty row filtering, column name generation, and comprehensive error handling.",
+  "frontend/src/lib/spreadsheet/search.ts": "Search utility that filters spreadsheet rows based on column values or across all columns when the sentinel is provided, with support for exact match and case-insensitive contains modes.",
+  "frontend/src/components/SpreadsheetUploader.tsx": "File upload component with drag-and-drop support, loading states, error display, and column count badge.",
+  "frontend/src/components/SearchControls.tsx": "Search interface with column selector (including \"All columns\" option), value input, match mode toggle (exact/contains), and keyboard support for triggering searches.",
+  "frontend/src/components/ResultsList.tsx": "Results display component showing matching rows in a column-wise key/value layout with match count, scrollable area, and empty cell placeholders.",
+  "frontend/src/index.css": "Global styles with warm coral/orange OKLCH color system for both light and dark modes, avoiding blue/purple palette.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Inter font family and custom design tokens matching the warm coral theme.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (not needed as app is fully client-side)."
+}

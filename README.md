@@ -1,2 +1,3 @@
-# excel-csv-search-app-retrieve-matching-rows-from-an-uploaded-sheet-and-display-r
-Exported from Caffeine project: Excel/CSV search app: retrieve matching rows from an uploaded sheet and display results column-wise
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

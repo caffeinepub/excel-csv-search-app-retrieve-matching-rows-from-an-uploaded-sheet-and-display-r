@@ -1,0 +1,26 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-search-workflow-so-the-user-can-enter-any-value-and-search-across-the-entire-uploaded-sheet-all-columns-returning-all-rows-where-any-cell-matches-the-entered-value-and-display-the-rest-of-the-data-from-those-matching-rows-using-the-column-headers-as-labels",
+      "featureTitle": "Update the search workflow so the user can enter any value and search across the entire uploaded sheet (all columns), returning all rows where any cell matches the entered value, and display the rest of the data from those matching rows using the column headers as labels.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SearchControls.tsx",
+        "frontend/src/lib/spreadsheet/search.ts",
+        "frontend/src/lib/spreadsheet/types.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
